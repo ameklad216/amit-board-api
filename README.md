@@ -1,8 +1,8 @@
+# Bored API Clone
+
 <p align="center">
   <img src="./assets/amit-logo.png" alt="AMIT Learning Logo" width="220">
 </p>
-
-# Bored API Clone
 
 A simple Express.js REST API created by **AMIT Learning**.
 
@@ -14,25 +14,23 @@ The app also includes Swagger API documentation so developers and students can t
 
 ## Created By
 
-**AMIT Learning**
+**[AMIT Learning](https://amit-learning.com/)**
 
 ---
 
-## Live API URL
-
-Replace this URL with your real Render deployment URL after publishing:
+## Base API URL
 
 ```txt
-https://YOUR-RENDER-SERVICE-NAME.onrender.com
+https://amit-bored-api.bonto.run
 ```
 
-Example routes after deployment:
+Example routes:
 
 ```txt
-https://YOUR-RENDER-SERVICE-NAME.onrender.com/random
-https://YOUR-RENDER-SERVICE-NAME.onrender.com/filter?type=education&participants=1
-https://YOUR-RENDER-SERVICE-NAME.onrender.com/activity/3943506
-https://YOUR-RENDER-SERVICE-NAME.onrender.com/api-docs
+https://amit-bored-api.bonto.run/random
+https://amit-bored-api.bonto.run/filter?type=education&participants=1
+https://amit-bored-api.bonto.run/activity/3943506
+https://amit-bored-api.bonto.run/api-docs
 ```
 
 ---
@@ -43,15 +41,15 @@ The purpose of this app is to help students understand how to build a real REST 
 
 This app demonstrates:
 
-- Creating an Express.js server
-- Building REST API endpoints
-- Returning JSON responses
-- Using route parameters
-- Using query parameters
-- Handling invalid routes
-- Filtering data
-- Creating API documentation using Swagger
-- Preparing a backend project for deployment
+* Creating an Express.js server
+* Building REST API endpoints
+* Returning JSON responses
+* Using route parameters
+* Using query parameters
+* Handling invalid routes
+* Filtering data
+* Creating API documentation using Swagger
+* Preparing a backend project for deployment
 
 This project can be used as a beginner-friendly backend practice project for students learning APIs and Express.js.
 
@@ -59,24 +57,24 @@ This project can be used as a beginner-friendly backend practice project for stu
 
 ## Features
 
-- Get a random activity
-- Filter activities by activity type
-- Filter activities by number of participants
-- Get a specific activity by key
-- Swagger documentation page
-- JSON API responses
-- Ready for deployment on Render
+* Get a random activity
+* Filter activities by activity type
+* Filter activities by number of participants
+* Get a specific activity by key
+* Swagger documentation page
+* JSON API responses
+* Ready for online deployment
 
 ---
 
 ## Tech Stack
 
-- Node.js
-- Express.js
-- Swagger UI Express
-- CORS
-- Dotenv
-- Nodemon
+* Node.js
+* Express.js
+* Swagger UI Express
+* CORS
+* Dotenv
+* Nodemon
 
 ---
 
@@ -84,6 +82,9 @@ This project can be used as a beginner-friendly backend practice project for stu
 
 ```txt
 bored-api-clone/
+│
+├── assets/
+│   └── amit-logo.png
 │
 ├── server.js
 ├── package.json
@@ -94,53 +95,15 @@ bored-api-clone/
 
 ---
 
-## Installation Steps
+## API Documentation
 
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY-NAME.git
-```
-
-### 2. Open the Project Folder
-
-```bash
-cd YOUR-REPOSITORY-NAME
-```
-
-### 3. Install Dependencies
-
-```bash
-npm install
-```
-
-### 4. Run the App in Development Mode
-
-```bash
-npm run dev
-```
-
-### 5. Run the App in Production Mode
-
-```bash
-npm start
-```
-
----
-
-## Local Development URL
-
-After running the app locally, open:
+Swagger documentation is available at:
 
 ```txt
-http://localhost:3000
+https://amit-bored-api.bonto.run/api-docs
 ```
 
-Swagger documentation:
-
-```txt
-http://localhost:3000/api-docs
-```
+Swagger allows you to view and test all API endpoints directly from the browser.
 
 ---
 
@@ -150,6 +113,12 @@ http://localhost:3000/api-docs
 
 ```http
 GET /
+```
+
+Example:
+
+```txt
+https://amit-bored-api.bonto.run/
 ```
 
 Returns a welcome message and available routes.
@@ -165,7 +134,7 @@ GET /random
 Example:
 
 ```txt
-http://localhost:3000/random
+https://amit-bored-api.bonto.run/random
 ```
 
 Returns one random activity.
@@ -180,21 +149,21 @@ GET /filter
 
 Available query parameters:
 
-| Query Parameter | Description |
-|---|---|
-| type | Filter by activity type |
-| participants | Filter by number of participants |
+| Query Parameter | Description                      |
+| --------------- | -------------------------------- |
+| type            | Filter by activity type          |
+| participants    | Filter by number of participants |
 
 Example:
 
 ```txt
-http://localhost:3000/filter?type=education
+https://amit-bored-api.bonto.run/filter?type=education
 ```
 
 Example:
 
 ```txt
-http://localhost:3000/filter?type=education&participants=1
+https://amit-bored-api.bonto.run/filter?type=education&participants=1
 ```
 
 ---
@@ -208,7 +177,7 @@ GET /activity/:key
 Example:
 
 ```txt
-http://localhost:3000/activity/3943506
+https://amit-bored-api.bonto.run/activity/3943506
 ```
 
 Returns a specific activity using its unique key.
@@ -248,56 +217,11 @@ busywork
 
 ---
 
-## Swagger Documentation
-
-The API documentation is available locally at:
-
-```txt
-http://localhost:3000/api-docs
-```
-
-After deployment:
-
-```txt
-https://YOUR-RENDER-SERVICE-NAME.onrender.com/api-docs
-```
-
-Swagger allows you to view and test all API endpoints from the browser.
-
----
-
-## Deployment on Render
-
-This app can be deployed using Render as a Web Service.
-
-### Render Settings
-
-Use the following settings when creating a new Web Service:
-
-```txt
-Service Type: Web Service
-Runtime: Node
-Build Command: npm install
-Start Command: npm start
-Instance Type: Free
-```
-
-After deployment, Render will give you a live URL similar to:
-
-```txt
-https://your-app-name.onrender.com
-```
-
-Use that URL to access your API and Swagger documentation.
-
----
-
 ## Notes
 
-- This project uses local in-memory data.
-- Data will reset if the server restarts.
-- This app is designed for learning and practice purposes.
-- For a real production project, you can connect it to a database such as MongoDB or PostgreSQL.
+* This app is designed for learning and practice purposes.
+* The API returns JSON responses.
+* The Swagger documentation can be used to test the endpoints directly from the browser, or in postman in the case of POST endpoints.
 
 ---
 
