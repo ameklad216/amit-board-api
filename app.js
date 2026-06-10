@@ -172,7 +172,7 @@ const openApiSpec = {
   },
   servers: [
     {
-      url: `http://localhost:${PORT}`,
+      url: `https://amit-bored-api.bonto.run:${PORT}`,
       description: "Local development server"
     }
   ],
@@ -367,7 +367,7 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(openApiSpec));
 app.get("/", (req, res) => {
   res.json({
     message: "Welcome to the Bored API Clone",
-    docs: `http://localhost:${PORT}/api-docs`,
+    docs: `https://amit-bored-api.bonto.run:${PORT}/api-docs`,
     endpoints: {
       random: "/random",
       filter: "/filter?type=education&participants=1",
@@ -450,7 +450,7 @@ app.get("/activity/:key", (req, res) => {
 app.use((req, res) => {
   res.status(404).json({
     error: "Route not found",
-    docs: `http://localhost:${PORT}/api-docs`
+    docs: `https://amit-bored-api.bonto.run:${PORT}/api-docs`
   });
 });
 
@@ -458,6 +458,6 @@ app.use((req, res) => {
  * Start server
  */
 app.listen(PORT, () => {
-  console.log(`Bored API Clone is running on http://localhost:${PORT}`);
-  console.log(`Swagger docs available at http://localhost:${PORT}/api-docs`);
+  console.log(`Bored API Clone is running on https://amit-bored-api.bonto.run:${PORT}`);
+  console.log(`Swagger docs available at https://amit-bored-api.bonto.run:${PORT}/api-docs`);
 });
